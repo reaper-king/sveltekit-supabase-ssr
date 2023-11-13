@@ -1,6 +1,5 @@
 <script lang="ts">
   import { invalidate } from '$app/navigation'
-  import { onMount } from 'svelte'
 
   let { data } = $props<{data: App.PageData}>()
   let { supabase, session } = data
@@ -9,7 +8,7 @@
     ({ supabase, session } = data)
   })
 
-  onMount(() => {
+  $effect(() => {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, _session) => {
