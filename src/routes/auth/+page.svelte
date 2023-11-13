@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let form
+  let { form } = $props<{form: { message: string }}>()
 </script>
 
 {#if form?.message}

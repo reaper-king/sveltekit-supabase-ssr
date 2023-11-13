@@ -1,7 +1,9 @@
 <script lang="ts">
-  export let data
-  
-  $: ({ session } = data)
+  let { data } = $props<{ data: App.PageData }>()
+  let { session } = data
+  $effect(() => {
+    ({ session } = data)
+  })
 </script>
 
 {#if session}
