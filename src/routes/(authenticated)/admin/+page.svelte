@@ -1,6 +1,7 @@
 <script lang="ts">
   let { data } = $props<{ data: App.PageData }>()
   let { session } = data
+  
   $effect(() => {
     ({ session } = data)
   })
