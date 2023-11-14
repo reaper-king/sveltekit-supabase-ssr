@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { form } = $props<{form: { message: string, email: string }}>()
+  let { form } = $props<{form: { message: string, data: { email: string }, error: string }}>()
 </script>
 
 <form method="POST" action="?/signin">
