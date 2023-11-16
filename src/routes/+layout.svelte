@@ -1,13 +1,14 @@
 <script lang="ts">
   import { invalidate } from '$app/navigation'
-  import { onMount } from 'svelte'
 
-  export let data
-
+  let { data } = $props<{data: App.PageData}>()
   let { supabase, session } = data
-  $: ({ supabase, session } = data)
+  
+  $effect(() => {
+    ({ supabase, session } = data)
+  })
 
-  onMount(() => {
+  $effect(() => {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event, _session) => {
