@@ -17,7 +17,7 @@ export const handle: Handle = async ({ event, resolve }) => {
         }
       }
     }
-  );
+  )
 
   /**
    * a little helper that is written for convenience so that instead
@@ -29,7 +29,7 @@ export const handle: Handle = async ({ event, resolve }) => {
       data: { session }
     } = await event.locals.supabase.auth.getSession()
     return session
-  };
+  }
 
   return resolve(event, {
     filterSerializedResponseHeaders(name) {
