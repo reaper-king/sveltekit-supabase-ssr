@@ -9,7 +9,7 @@
   <button formaction="?/signup" style="margin-top: 12px;">Signup</button>
 </form>
 <form method="POST" action="?/oauth">
-  <button style="margin-top: 12px;" name="provider" value="github">Login with GitHub</button>
+  <button style="margin-top: 12px;" name="provider" value="google">Login with Googlr</button>
 </form>
 <form method="POST" action="?/anon">
   <button style="margin-top: 12px;">Login Anonymously</button>
